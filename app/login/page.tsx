@@ -70,7 +70,9 @@ export default function Login() {
               placeholder="••••••••"
             />
           </div>
-
+          <p className="mt-4 text-center text-sm text-gray-600">
+  ¿No tienes cuenta? <a href="/register" className="text-blue-500 hover:underline">Regístrate aquí</a>
+</p>
           <button
             type="submit"
             className="w-full bg-blue-600 text-white font-bold py-3 rounded-xl hover:bg-blue-700 transition-all shadow-md shadow-blue-200 mt-2"
