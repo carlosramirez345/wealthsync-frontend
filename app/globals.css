@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* 🌙 Esta línea activa el Modo Oscuro por clases en Tailwind v4 */
+@custom-variant dark (&:is(.dark *));
