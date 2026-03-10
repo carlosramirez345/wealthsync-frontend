@@ -20,7 +20,7 @@ const SubscriptionsWidget = () => {
     const [formData, setFormData] = useState({ name: '', amount: '', due_day: '' });
 
     // ID de prueba (asegúrate de cambiarlo por el real después)
-    const userId = 1; 
+  const userId = typeof window !== 'undefined' ? localStorage.getItem('userId') : null;
 
     const fetchSubs = async () => {
         try {
