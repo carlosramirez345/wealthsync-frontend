@@ -20,9 +20,9 @@ const SubscriptionsWidget = () => {
     const [formData, setFormData] = useState({ name: '', amount: '', due_day: '' });
 
     // ID de prueba (asegúrate de cambiarlo por el real después)
-  const userId = typeof window !== 'undefined' ? localStorage.getItem('userId') : null;
-
-    const fetchSubs = async () => {
+  const userId = typeof window !== 'undefined' ? Number(localStorage.getItem('userId')) : 1;
+  
+  const fetchSubs = async () => {
         try {
             const res = await axios.get(`https://wealthsync-backend.onrender.com/api/v1/subscriptions/${userId}`);
             setSubs(res.data.subscriptions);
