@@ -8,6 +8,7 @@ import {
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import Link from 'next/link';
+import SubscriptionsWidget from '@/components/SubscriptionsWedget';
 
 function formatCurrency(amount: number): string {
   return new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(amount);
@@ -440,6 +441,8 @@ await fetch('https://wealthsync-backend-d0y9.onrender.com/api/v1/transactions', 
               })}
             </div>
           </div>
+
+          <SubscriptionsWidget/>
 
           {/* GRÁFICAS */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-10">
